@@ -1,109 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Bernard</title>
     <style>
         body {
+            background: #1a1a1a;
+            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #1a1a1a; /* Very close to black */
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.9); /* Slightly more transparent */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
-            font-size: 2.5em;
-            color: #ffffff; /* White for contrast */
+            font-size: 40px;
             margin-bottom: 20px;
         }
-        .paypal-form {
-            margin: 20px 0;
-            color: #ffffff; /* White for form text */
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
         }
-        .paypal-form select {
-            padding: 10px;
-            font-size: 1em;
-            margin-bottom: 10px;
-            border-radius: 5px;
+        form {
+            text-align: center;
         }
-        .paypal-form input[type="image"] {
-            max-width: 200px;
+        table {
+            margin: 0 auto;
         }
-        .subscribe-text {
-            font-size: 1.2em;
-            color: #ffffff; /* White for contrast */
-            margin: 20px 0;
+        td {
+            padding: 5px;
+            text-align: center;
         }
-        .button {
-            display: inline-block;
-            margin: 10px;
-            text-decoration: none;
+        select {
+            font-size: 16px;
+            padding: 5px;
+            width: 200px;
         }
-        .button img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.2s;
-        }
-        .button img:hover {
-            transform: scale(1.05);
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            .button img {
-                max-width: 200px;
-            }
-            .subscribe-text {
-                font-size: 1em;
-            }
-            .container {
-                padding: 10px;
-            }
+        input[type="image"] {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>WELCOME to PETER BERNARD dot com</h1>
-        <div class="button">
-            <a href="https://www.youtube.com/playlist?list=PLkER5vMZqHjkefK70MteWw5CHhGpLGQMJ">
-                <img src="https://images.unsplash.com/photo-1519742866993-66d3cfef4bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80" alt="Scary Stories NYC" title="Scary Stories NYC">
-            </a>
-        </div>
-        <div class="paypal-form">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="UAGWRU6DEP9ZY">
-                <table>
-                    <tr><td><input type="hidden" name="on0" value="3 Tiers">Choose a Tier:</td></tr>
-                    <tr><td><select name="os0">
-                        <option value="Standard">Standard: $3.00 USD - monthly</option>
-                        <option value="Patron">Patron: $7.00 USD - monthly</option>
-                        <option value="Poor Person">Poor Person: $1.50 USD - monthly</option>
-                    </select></td></tr>
-                </table>
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - Subscribe Now">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-            </form>
-        </div>
-        <p class="subscribe-text">SUBSCRIBE to SCARY STORIES NYC to get secret extra stories on the weekends!</p>
-        <div class="button">
-            <a href="https://x.com/ThoseUSAGirls">
-                <img src="those-american-girls.jpg" alt="Those American Girls" title="Those American Girls">
-            </a>
-        </div>
-    </div>
+    <h1>peter bernard dot com</h1>
+    <h2>Become a Scary Stories NYC Paypal Club Member!</h2>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="UAGWRU6DEP9ZY">
+        <table>
+            <tr>
+                <td>
+                    <input type="hidden" name="on0" value="3 Tiers">
+                    3 Tiers
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="os0">
+                        <option value="Standard">Standard $3.00 USD - month(s)</option>
+                        <option value="Patron">Patron $7.00 USD - month(s)</option>
+                        <option value="Poor Person">Poor Person $1.50 USD - month(s)</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Subscribe">
+    </form>
 </body>
 </html>
